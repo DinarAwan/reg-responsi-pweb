@@ -1,0 +1,45 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Registrasi Dulu Brok</h1>
+        <form id="registrationForm" method="post" action="ini.php">
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="nama">
+                <div class="error-message" id="name-error">Nama harus diisi</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email">
+                <div class="error-message" id="email-error">Email tidak valid</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <div class="error-message" id="password-error">Password minimal 6 karakter</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Konfirmasi Password</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+                <div class="error-message" id="confirm-error">Password tidak cocok</div>
+                <div class="password-match" id="password-match">Password cocok!</div>
+            </div>
+            
+            <button type="submit">Daftar</button>
+            <button type="reset">Batal</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

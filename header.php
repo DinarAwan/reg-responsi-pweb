@@ -28,12 +28,12 @@
     </div>
     <form action="reset.php" method="post" style="margin-top: 10px;">
     <button type="submit" class="logout-btn" style="background-color: #e74c3c;">Reset Semua Data</button>
-    <a href="index.php" class="logout-btn">Kembali ke Registrasi</a>
+    <a href="index.html" class="logout-btn">Kembali ke Registrasi</a>
 
 </form>
   <?php else: ?>
     <p>Tidak ada data pengguna.</p>
-    <a href="index.php">Registrasi Sekarang</a>
+    <a href="index.html">Registrasi Sekarang</a>
   <?php endif; ?>
 </div>
 

@@ -4,46 +4,46 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
+    const konfirmasi = document.getElementById('confirm-password').value;
     
-    let isValid = true;
+    let apakahValid = true;
 
     if (name === '') {
         showError('name-error', 'Nama harus diisi');
-        isValid = false;
+        apakahValid = false;
     } else {
         hideError('name-error');
     }
 
-    if (!isValidEmail(email)) {
+    if (!emailValid(email)) {
         showError('email-error', 'Email tidak valid');
-        isValid = false;
+        apakahValid = false;
     } else {
         hideError('email-error');
     }
 
     if (password.length < 6) {
         showError('password-error', 'Password minimal 6 karakter');
-        isValid = false;
+        apakahValid = false;
     } else {
         hideError('password-error');
     }
 
-    if (password !== confirmPassword) {
+    if (password !== konfirmasi) {
         showError('confirm-error', 'Password tidak cocok');
         hideSuccess('password-match');
-        isValid = false;
-    } else if (confirmPassword.length > 0) {
+        apakahValid = false;
+    } else if (konfirmasi.length > 0) {
         hideError('confirm-error');
         showSuccess('password-match', 'Password cocok!');
     }
 
-    if (isValid) {
+    if (apakahValid) {
         this.submit();
     }
 });
 
-function isValidEmail(email) {
+function emailValid(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
@@ -70,10 +70,10 @@ function hideSuccess(id) {
 
 document.getElementById('confirm-password').addEventListener('input', function() {
     const password = document.getElementById('password').value;
-    const confirmPassword = this.value;
+    const konfirmasi = this.value;
 
-    if (confirmPassword.length > 0) {
-        if (password !== confirmPassword) {
+    if (konfirmasi.length > 0) {
+        if (password !== konfirmasi) {
             showError('confirm-error', 'Password tidak cocok');
             hideSuccess('password-match');
         } else {

@@ -1,5 +1,5 @@
 <?php
 session_start();
-unset($_SESSION['pengguna']); // Hapus seluruh data pengguna
-header('Location: header.php'); // Kembali ke form registrasi
+unset($_SESSION['pengguna']); 
+header('Location: header.php');
 exit;

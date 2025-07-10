@@ -12,13 +12,13 @@ body {
     margin: 0;
 }
 
-.registration-container {
+.regCon {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 100px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 100%;
-    max-width: 400px;
+    width: 800px;
+    
 }
 
 h1 {
@@ -37,15 +37,38 @@ label {
     margin-bottom: 6px;
     color: #555;
     font-weight: 500;
+    margin-left: 175px;
+    
+}
+
+.error-message{
+   
+        display: block;
+        margin-bottom: 6px;
+        color: #555;
+        font-weight: 500;
+        margin-left: 175px;
+        
+}
+
+.password-match{
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 500;
+    margin-left: 175px;
 }
 
 input {
-    width: 100%;
+    width: 400px;
+    text-align: center;
     padding: 10px 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
     transition: border-color 0.3s;
+    display: block; 
+    margin: 0 auto;
 }
 
 input:focus {
@@ -53,8 +76,8 @@ input:focus {
     border-color: #4a90e2;
 }
 
-button {
-    width: 100%;
+.btnSubmit {
+    width: 400px;
     padding: 12px;
     background-color: #4a90e2;
     color: white;
@@ -65,9 +88,34 @@ button {
     cursor: pointer;
     margin-top: 8px;
     transition: background-color 0.3s;
+    text-align: center;
+    display: block; 
+    margin: 0 auto;
+    margin-bottom: 15px;
 }
 
-button:hover {
+.btsSubmit:hover {
+    background-color: #3a7bc8;
+}
+
+.btnReset {
+    width: 400px;
+    padding: 12px;
+    background-color: #f70c0c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: block; 
+    margin: 0 auto;
+}
+
+.btsReset:hover {
     background-color: #3a7bc8;
 }
 
